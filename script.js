@@ -1,6 +1,6 @@
 
 gsap.to('#box1', {
-    x: "300",
+    x: "280",
     duration: 2,
     // delay: 1,
     rotate: 360,
@@ -32,7 +32,7 @@ gsap.from("h1", {
 })
 
 gsap.from('#box12', {
-    x: 300,
+    x: 280,
     duration: 2,
     // delay: 1,
     rotate: 360,
