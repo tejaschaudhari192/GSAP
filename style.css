@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(48, 46, 46);
+    color: floralwhite;
+}
+
+#box1 {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-radius: 20px;
+}
+
+#box2 {
+    height: 300px;
+    width: 300px;
+    background-color: lightseagreen;
+
+}
+
+#box12 {
+    height: 100px;
+    width: 100px;
+    background-color: lightseagreen;
+    border-radius: 20px;
+}
