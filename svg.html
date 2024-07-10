@@ -54,12 +54,22 @@
 
         var string = document.querySelector('#string');
         string.addEventListener('mousemove', (e) => {
-            path = `M 10 100 Q 250 ${e.y} 480 100`
+            path = `M 10 100 Q ${e.x} ${e.y} 480 100`
 
             gsap.to("svg path", {
                 attr: { d: path },
-
+                duration: 0.3,
+                ease: 'power3.out'
             })
+        })
+
+        string.addEventListener('mouseleave', (e) => {
+            gsap.to("svg path", {
+                attr: { d: finalPath },
+                duration: 1,
+                ease: "elastic.out(1,0.2)",
+                delay: 0.3
+            });
         })
     </script>
 </body>
