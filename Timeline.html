@@ -73,6 +73,28 @@
             cursor: pointer;
         }
     }
+
+    @media (max-width: 480px) {
+        #nav {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        #nav h2 {
+            font-size: 30px;
+        }
+
+        #full h4 {
+            font-size: 30px;
+
+        }
+
+        #full i {
+            top: 10px;
+            right: 10px;
+        }
+    }
+
 </style>
 
 <body>
@@ -104,13 +126,13 @@
     var tl = gsap.timeline({paused: false});
     tl.to("#full", {
         right: 0,
-        duration: 0.6,
+        duration: 0.5,
 
     })
 
     tl.from("#full h4", {
         x: 150,
-        duration: 0.7,
+        duration: 0.5,
         stagger: 0.25,
         opacity: 0
     })
@@ -118,6 +140,7 @@
     tl.from("#full i", {
         opacity: 0,
     })
+
     tl.pause()
 
 
