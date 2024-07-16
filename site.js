@@ -1,3 +1,6 @@
+var timri = new Audio("./audio/timri.mp3");
+timri.autoplay = true;
+timri.play();
 var tl = gsap.timeline();
 
 tl.from("nav h1, nav h4, nav button",{
@@ -31,11 +34,16 @@ tl.from('.hero-part1 button',{
     duration: 0.4
 })
 
-tl.from('.hero-bottom img',{
+gsap.from('.hero-bottom img',{
     opacity:0,
     stagger: 0.2,
     duration:0.6,
-    y:30
+    y:30,
+    scrollTrigger: {
+        trigger: ".hero-bottom img",
+        scroller: 'body',
+        start:"top 80%"
+    }
 })
 
 

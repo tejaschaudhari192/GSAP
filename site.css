@@ -22,8 +22,9 @@
     display: inline-block;
     font-family: 'china';
 }
-body{
-    overflow-x:hidden;
+
+body {
+    overflow-x: hidden;
 }
 
 section {
@@ -206,6 +207,7 @@ nav {
 
 .service-right {
     display: flex;
+
     & img {
         margin: auto;
     }
@@ -244,33 +246,32 @@ nav {
 .case-study {
     background-color: var(--primary);
     color: var(--tertiary);
-    padding: 40px 120px;
-    text-align: center;
     margin-top: 40px;
 
-    & h2 {
-        font-family: 'chinaBold';
-        font-size: 40px;
-        margin-bottom: 20px;
-    }
-
     & .case-study-container {
+        padding: 70px;
+        text-align: left;
         display: flex;
+        border-radius: 20px;
+        margin: 0 100px;
+        background-color: var(--tertiary);
+        color: #f3f3f3;
         justify-content: space-between;
-        gap: 30px;
+
+        & .line-div {
+            border: 1px solid #f3f3f3;
+        }
     }
 
     & .case {
         width: 30%;
-        background-color: var(--tertiary);
-        color: var(--primary);
-        padding: 20px;
-        border-radius: 20px;
+        text-wrap: wrap;
         box-shadow: 0 10px var(--tertiary);
     }
 
     & .case h3 {
-        font-size: 24px;
+        font-size: 20px;
+        font-weight: lighter;
         margin-bottom: 10px;
     }
 
@@ -280,38 +281,65 @@ nav {
 
     & .case a {
         color: var(--secondary);
-        display: inline-block;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
         margin-top: 10px;
         font-size: 18px;
+
+        & i {
+            font-size: 30px;
+        }
     }
 }
 
 .cta-section {
-    background-color: var(--tertiary);
-    color: var(--primary);
-    padding: 60px 120px;
-    text-align: center;
-    margin-top: 40px;
+    background-color: #f1f1f1;
+    color: var(--tertiary);
+    margin: 100px;
+    display: flex;
+    border-radius: 50px;
+    padding: 60px;
+    width: fit-content;
+    height: 370px;
 
-    & h2 {
-        font-family: 'chinaBold';
-        font-size: 40px;
-        margin-bottom: 20px;
+    & .cta-left {
+        display: flex;
+        flex-direction: column;
+
+        & h2 {
+            font-family: 'china';
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        & p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            width: 50%;
+        }
+
+        & button {
+            font-family: monospace;
+            background-color: var(--tertiary);
+            color: var(--primary);
+            border-radius: 20px;
+            padding: 22px 40px;
+            font-size: 25px;
+            width: fit-content;
+        }
     }
 
-    & p {
-        font-size: 20px;
-        margin-bottom: 20px;
+    position: relative;
+
+    & .cta-right {
+        & img {
+            position: absolute;
+            right: 10%;
+            width: 25%;
+            top: 5%;
+        }
     }
 
-    & button {
-        background-color: var(--primary);
-        color: var(--tertiary);
-        padding: 15px 30px;
-        font-size: 18px;
-        font-weight: 600;
-        border-radius: 10px;
-        border: none;
-        cursor: pointer;
-    }
+
 }
