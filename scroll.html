@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #000;
+    }
+
+    #page1,
+    #page2,
+    #page3 {
+        height: 100%;
+        width: 100%;
+    }
+
+    #move {
+        display: flex;
+        gap: 20px;
+        background-color: yellow;
+        overflow: hidden;
+        padding: 3vw 0;
+    }
+
+    .marque {
+        display: flex;
+        flex-shrink: 0;
+        gap: 3vw;
+        align-items: center;
+        text-transform: uppercase;
+        transform: translate(-100%);
+        font-size: 4vw;
+        padding: 0 1.5vw;
+
+        & img {
+            width: 8vw;
+        }
+    }
+</style>
+
+<body>
+
+    <div id="page1"></div>
+    <div id="page2">
+        <div id="move">
+            <div class="marque">
+                <h1>thrive beyond limit</h1>
+                <img src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg" alt="">
+            </div>
+            <div class="marque">
+                <h1>thrive beyond limit</h1>
+                <img src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg" alt="">
+            </div>
+            <div class="marque">
+                <h1>thrive beyond limit</h1>
+                <img src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg" alt="">
+            </div>
+            <div class="marque">
+                <h1>thrive beyond limit</h1>
+                <img src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg" alt="">
+            </div>
+            <div class="marque">
+                <h1>thrive beyond limit</h1>
+                <img src="https://www.brandium.nl/wp-content/uploads/2023/07/arrow-br.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="page3"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+        window.addEventListener('wheel', (e) => {
+            if (e.deltaY > 0) {
+                gsap.to(".marque", {
+                    transform: 'translateX(-200%)',
+                    repeat: -1,
+                    ease: "none",
+
+                })
+
+                gsap.to(".marque img", {
+                    rotate: 180
+                })
+
+            }
+            else {
+                gsap.to(".marque", {
+                    transform: 'translateX(0%)',
+                    repeat: -1,
+                    ease: "none",
+                })
+                gsap.to(".marque img", {
+                    rotate: 0
+                })
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>
