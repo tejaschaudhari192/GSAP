@@ -161,13 +161,10 @@ nav {
 .services-container {
     height: 80%;
     width: 100%;
-    padding: 40px 120px;
+    padding: 40px 10%;
     display: flex;
     justify-content: space-between;
-    gap: 0;
     flex-wrap: wrap;
-
-    gap: 50px;
 }
 
 .service {
@@ -181,6 +178,8 @@ nav {
     padding: 50px;
     display: flex;
     justify-content: space-between;
+    margin: 30px 0;
+
 }
 
 .service-left {
