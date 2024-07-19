@@ -153,3 +153,24 @@ gsap.from('#case-study .services p', {
         // scrub: 2
     }
 })
+
+
+let tl3 = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.case a',
+        scroller: 'body',
+        start: "top 80%",
+        end: "top 0%"
+    }
+})
+
+
+tl3.from(".case a",{
+    duration:0.6,
+    opacity:0,
+})
+tl3.from(".case a i",{
+    delay: 0.3,
+    duration:0.7,
+    opacity:0,
+})
