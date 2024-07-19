@@ -246,7 +246,7 @@ nav {
 #case-study {
     background-color: var(--primary);
     color: var(--tertiary);
-    margin-top: 40px;
+    margin: 40px 0 100px 0;
 
     & .case-study-container {
         padding: 70px;
@@ -286,7 +286,6 @@ nav {
         align-items: center;
         margin-top: 10px;
         font-size: 18px;
-
         & i {
             font-size: 30px;
         }
